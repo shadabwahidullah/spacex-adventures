@@ -24,7 +24,7 @@ function App() {
         </nav>
         <Switch>
           <Route exact path="/" />
-          <route exact path="/missions" />
+          <Route exact path="/missions" />
         </Switch>
       </div>
     </Router>

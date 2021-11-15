@@ -10,6 +10,7 @@ import './App.css';
 import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import logo from './assets/img/logo.png';
+import MyProfile from './components/MyProfile';
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
             <li>
               <NavLink to="/missions">Missions</NavLink>
             </li>
+            <li>
+              <NavLink to="/profile">My Profile</NavLink>
+            </li>
           </ul>
         </nav>
         <Switch>
@@ -32,6 +36,9 @@ function App() {
           </Route>
           <Route exact path="/missions">
             <Missions />
+          </Route>
+          <Route exact path="/profile">
+            <MyProfile />
           </Route>
         </Switch>
       </div>

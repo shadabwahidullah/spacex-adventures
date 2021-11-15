@@ -1,6 +1,10 @@
 import './App.css';
-import { Router } from 'react-router';
-import { NavLink } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  NavLink,
+} from 'react-router-dom';
 
 function App() {
   return (
@@ -18,10 +22,10 @@ function App() {
             </li>
           </ul>
         </nav>
-        <switch>
-          <route exact path="/" />
+        <Switch>
+          <Route exact path="/" />
           <route exact path="/missions" />
-        </switch>
+        </Switch>
       </div>
     </Router>
   );

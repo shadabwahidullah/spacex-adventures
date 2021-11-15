@@ -1,7 +1,8 @@
-import { configureStore, applyMiddleware } from "@reduxjs/toolkit";
-import logger from "redux-logger";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
 
-export default configureStore ({
-    reducer: {},
-    applyMiddleware(logger)
-})
+const reducer = combineReducers({
+  // reducers come here
+});
+
+export default createStore(reducer, applyMiddleware(logger));

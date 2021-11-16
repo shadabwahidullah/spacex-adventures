@@ -3,7 +3,6 @@ import { React } from 'react';
 const Rocket = (props) => {
   // From the rockets state slice we only need {id, rocket_name, description, flickr_images}
   // flickr_images is an array of photos
-  console.log('the props for rockect ', props);
   const { rocket } = props;
   const {
     id,
@@ -12,7 +11,6 @@ const Rocket = (props) => {
     flickr_images: flickerImages,
   } = rocket;
 
-  console.log('fliker images', flickerImages);
   return (
     <div className="row p-3">
       <img

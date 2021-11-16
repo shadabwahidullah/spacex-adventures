@@ -1,17 +1,24 @@
+import axios from 'axios';
+
 export const FETCH_ROCKETS = '/spacex-adventures/rockets/FETCH_ROCKETS';
 
-// const BASE_URL = 'https://api.spacexdata.com/v3/rockets';
+const BASE_URL = 'https://api.spacexdata.com/v3/rockets';
 
 const initialState = {};
 
-export const fetchRocketsCreator = (dispatch, payload) => {
-  dispatch(
-    {
-      type: FETCH_ROCKETS,
-      payload,
-    },
-    [],
-  );
+export const FetchRockets = (payload) => ({
+  type: FETCH_ROCKETS,
+  payload,
+});
+
+export const fetchRocketsCreator = (dispatch) => {
+  axios.get(BASE_URL).then((res) => {
+    console.log('response from fetched url', res.data);
+  });
+  dispatch({
+    type: FETCH_ROCKETS,
+    payload: {},
+  });
 };
 
 const reducer = (state = initialState, action) => {

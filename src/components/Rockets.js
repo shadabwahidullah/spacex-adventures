@@ -10,7 +10,7 @@ const Rockets = () => {
     fetchRocketsCreator(dispatch);
   }, []);
   return (
-    <div>
+    <div className="rockets-list">
       {rockets.Rockets.map((rocket) => {
         const { id } = rocket;
         return <Rocket key={id} rocket={rocket} />;

@@ -6,21 +6,27 @@ const Rocket = (props) => {
   console.log('the props for rockect ', props);
   const { rocket } = props;
   const {
-    id, rocket_name: rocketName, description, flickr_images: flickerImages,
+    id,
+    rocket_name: rocketName,
+    description,
+    flickr_images: flickerImages,
   } = rocket;
 
   console.log('fliker images', flickerImages);
-  //   console.log('fliker images', pro);
-  //   console.log('fliker images', flickerImages);
-  //   console.log('fliker images', flickerImages);
   return (
-    <div>
-      <img src={flickerImages[0]} alt="spaceship" />
-      <h2>{rocketName}</h2>
-      <p>{description}</p>
-      <button id={id} type="button">
-        Reserve Rocket
-      </button>
+    <div className="row p-3">
+      <img
+        className="img-fluid col-md-4"
+        src={flickerImages[0]}
+        alt="spaceship"
+      />
+      <div className="col-md-8 ps-3">
+        <h2 className="fs-3">{rocketName}</h2>
+        <p>{description}</p>
+        <button className="btn btn-primary" id={id} type="button">
+          Reserve Rocket
+        </button>
+      </div>
     </div>
   );
 };

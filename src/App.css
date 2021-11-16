@@ -5,3 +5,8 @@
   text-decoration: none;
   list-style: none;
 }
+
+.logo{
+  width: 50px;
+  height: auto;
+}

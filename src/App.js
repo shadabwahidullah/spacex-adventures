@@ -27,15 +27,15 @@ function App() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div className="navbar-nav justify-content-end">
-                <NavLink className="nav-link" to="/">Rockets</NavLink>
-                <NavLink className="nav-link" to="/missions">Missions</NavLink>
-                <NavLink className="nav-link" to="/profile">My Profile</NavLink>
+                <NavLink className="nav-link" activeClassName="active" to="/rockets">Rockets</NavLink>
+                <NavLink className="nav-link" activeClassName="active" to="/missions">Missions</NavLink>
+                <NavLink className="nav-link" activeClassName="active" to="/profile">My Profile</NavLink>
               </div>
             </div>
           </div>
         </nav>
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/rockets">
             <Rockets />
           </Route>
           <Route exact path="/missions">

@@ -4,15 +4,17 @@ import Rocket from './Rocket';
 import { fetchRocketsCreator } from '../redux/RocketsReducer';
 
 const Rockets = () => {
-  const rockets = useSelector((state) => state.Rockets);
-  console.log(rockets);
+  const rockets = useSelector((state) => state.rocketReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     fetchRocketsCreator(dispatch);
   }, []);
   return (
     <div>
-      <Rocket />
+      {rockets.Rockets.map((rocket) => {
+        const { id } = rocket;
+        return <Rocket key={id} rocket={rocket} />;
+      })}
     </div>
   );
 };

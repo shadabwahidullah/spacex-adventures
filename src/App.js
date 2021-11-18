@@ -15,11 +15,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/src/collapse';
 
 function App() {
-  // if (location.pathname === '/missions') {
-  // // }
-  // className={(isActive) =>
-  //   'nav-link' + (!isActive ? ' ' : 'active')
-  // // }
   return (
     <Router>
       <div className="container">

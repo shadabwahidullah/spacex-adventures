@@ -35,7 +35,7 @@ function App() {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink className="nav-link" activeClassName="active" to="/rockets">Rockets</NavLink>
+                  <NavLink className="nav-link" activeClassName="active" to="/" exact>Rockets</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" activeClassName="active" to="/missions">Missions</NavLink>
@@ -48,7 +48,7 @@ function App() {
           </div>
         </nav>
         <Switch>
-          <Route exact path="/rockets">
+          <Route exact path="/">
             <Rockets />
           </Route>
           <Route exact path="/missions">
@@ -56,9 +56,6 @@ function App() {
           </Route>
           <Route exact path="/profile">
             <MyProfile />
-          </Route>
-          <Route exact path="/">
-            <Rockets />
           </Route>
         </Switch>
       </div>

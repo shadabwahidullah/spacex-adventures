@@ -2,6 +2,7 @@ import axios from 'axios';
 
 export const FETCH_ROCKETS = '/spacex-adventures/rockets/FETCH_ROCKETS';
 export const RESERVE_ROCKET = '/spacex-adventures/rockets/RESERVE_ROCKET';
+export const CANCEL_RESERVE_ROCKET = '/spacex-adventures/rockets/CANCEL_RESERVE_ROCKET';
 
 const BASE_URL = 'https://api.spacexdata.com/v3/rockets';
 
@@ -21,6 +22,11 @@ export const reserveRocket = (id) => ({
   payload: id,
 });
 
+export const cancelReserveRocket = (id) => ({
+  type: CANCEL_RESERVE_ROCKET,
+  payload: id,
+});
+
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
@@ -31,6 +37,16 @@ const reducer = (state = initialState, action) => {
         Rockets: state.Rockets.map((rocket) => {
           if (rocket.id === action.payload) {
             return { ...rocket, reserved: true };
+          }
+          return rocket;
+        }),
+      };
+    case CANCEL_RESERVE_ROCKET:
+      return {
+        ...state,
+        Rockets: state.Rockets.map((rocket) => {
+          if (rocket.id === action.payload) {
+            return { ...rocket, reserved: false };
           }
           return rocket;
         }),

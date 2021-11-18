@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './Rocket';
-import { fetchRocketsCreator } from '../redux/RocketsReducer';
+import { fetchRocketsCreator } from '../../redux/RocketsReducer';
 
 let flag = true;
 

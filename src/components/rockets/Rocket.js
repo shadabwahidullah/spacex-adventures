@@ -1,7 +1,7 @@
 import { React } from 'react';
 import { useDispatch } from 'react-redux';
 import Carousel from 'react-bootstrap/Carousel';
-import { reserveRocket, cancelReserveRocket } from '../redux/RocketsReducer';
+import { reserveRocket, cancelReserveRocket } from '../../redux/RocketsReducer';
 
 const Rocket = (props) => {
   // From the rockets state slice we only need {id, rocket_name, description, flickr_images}

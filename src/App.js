@@ -7,7 +7,7 @@ import {
 
 // Components
 import './App.css';
-import Rockets from './components/Rockets';
+import Rockets from './components/rockets/Rockets';
 import Missions from './components/missions/Missions';
 import logo from './assets/img/logo.png';
 import MyProfile from './components/MyProfile';

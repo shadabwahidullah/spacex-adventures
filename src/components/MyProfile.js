@@ -14,7 +14,7 @@ const MyProfile = () => {
         {rockets.Rockets.map((rocket) => {
           const { rocket_name: rocketName, id, reserved } = rocket;
           if (reserved) {
-            return <h6 key={id}>{rocketName}</h6>;
+            return <h6 className="border outline-secondary m-0 p-3" key={id}>{rocketName}</h6>;
           }
           return null;
         })}

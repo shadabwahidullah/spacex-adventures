@@ -27,8 +27,11 @@ const Rocket = (props) => {
         ))}
       </Carousel>
       <div className="col-md-8 ps-3">
-        <h2 className="fs-3">{rocketName}</h2>
-        <p>{description}</p>
+        <h2 className="fs-3 mt-2">{rocketName}</h2>
+        <p>
+          {reserved && <span className="badge bg-success me-2">Reserved</span>}
+          {description}
+        </p>
         {reserved ? (
           <button
             className="btn btn-outline-secondary"

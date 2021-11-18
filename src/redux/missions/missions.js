@@ -2,22 +2,53 @@ import axios from 'axios';
 
 // Action Types
 const FETCH_MISSIONS = 'spaceXAdventure/missions/FETCH_MISSIONS';
+const JOIN_MISSION = 'spaceXAdventure/missions/JOIN_MISSION';
+const LEAVE_MISSION = 'spaceXAdventure/missions/LEAVE_MISSION';
 
-const initialState = [];
+const initialState = { missions: [] };
 
 // Action Creators
 export const fetchMissions = () => async (dispatch) => {
   const response = await axios.get('https://api.spacexdata.com/v3/missions');
   const { data } = response;
+  console.log('Data: ', data);
 
   dispatch({ type: FETCH_MISSIONS, payload: data });
+};
+
+export const joinMission = (id) => async (dispatch) => {
+  dispatch({ type: JOIN_MISSION, payload: id });
+};
+
+export const leaveMission = (id) => async (dispatch) => {
+  dispatch({ type: LEAVE_MISSION, payload: id });
 };
 
 // Mission Reducer
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_MISSIONS:
-      return action.payload;
+      return { ...state, missions: action.payload };
+    case JOIN_MISSION:
+      return {
+        ...state,
+        missions: state.missions.map((mission) => {
+          if (mission.id === action.payload) {
+            return { ...mission, reserved: true };
+          }
+          return mission;
+        }),
+      };
+    case LEAVE_MISSION:
+      return {
+        ...state,
+        missions: state.missions.map((mission) => {
+          if (mission.id === action.payload) {
+            return { ...mission, reserved: false };
+          }
+          return mission;
+        }),
+      };
     default:
       return state;
   }

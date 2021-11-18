@@ -1,4 +1,5 @@
 import { React } from 'react';
+import Carousel from 'react-bootstrap/Carousel';
 
 const Rocket = (props) => {
   // From the rockets state slice we only need {id, rocket_name, description, flickr_images}
@@ -13,11 +14,13 @@ const Rocket = (props) => {
 
   return (
     <div className="row p-3">
-      <img
-        className="img-fluid col-md-4"
-        src={flickerImages[0]}
-        alt="spaceship"
-      />
+      <Carousel className="col-md-4 carousel-custom">
+        {flickerImages.map((rocket) => (
+          <Carousel.Item key={rocket}>
+            <img className="img-fluid" src={rocket} alt="First slide" />
+          </Carousel.Item>
+        ))}
+      </Carousel>
       <div className="col-md-8 ps-3">
         <h2 className="fs-3">{rocketName}</h2>
         <p>{description}</p>

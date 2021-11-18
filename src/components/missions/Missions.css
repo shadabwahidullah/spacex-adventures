@@ -1,0 +1,38 @@
+.desc {
+  width: 60%;
+}
+
+.not-member,
+.active-member {
+  font-weight: bold;
+  background-color: rgb(104, 104, 104);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 0.75rem;
+  padding: 0.25em 1em;
+}
+
+.join-mission,
+.leave-mission {
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+  background-color: transparent;
+  border: 1px solid rgb(104, 104, 104);
+  border-radius: 0.5em;
+  font-size: 0.75rem;
+  padding: 0.25em 1em;
+}
+
+.active-member {
+  background-color: rgb(46, 174, 161);
+}
+
+.leave-mission {
+  border: 1px solid rgb(252, 71, 71);
+  color: rgb(252, 71, 71);
+}
+
+.btn:hover {
+  background-color: rgb(202, 202, 202);
+}

@@ -16,6 +16,6 @@
   text-decoration: underline !important;
 }
 
-.active {
-  text-decoration: underline;
+.btn {
+  box-shadow: none !important;
 }

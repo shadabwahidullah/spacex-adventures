@@ -7,7 +7,7 @@ import {
 
 // Components
 import './App.css';
-import Rockets from './components/Rockets';
+import Rockets from './components/rockets/Rockets';
 import Missions from './components/missions/Missions';
 import logo from './assets/img/logo.png';
 import MyProfile from './components/MyProfile';
@@ -15,11 +15,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/src/collapse';
 
 function App() {
-  // if (location.pathname === '/missions') {
-  // // }
-  // className={(isActive) =>
-  //   'nav-link' + (!isActive ? ' ' : 'active')
-  // // }
   return (
     <Router>
       <div className="container">
@@ -35,7 +30,7 @@ function App() {
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <NavLink className="nav-link" activeClassName="active" to="/rockets">Rockets</NavLink>
+                  <NavLink className="nav-link" activeClassName="active" to="/" exact>Rockets</NavLink>
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link" activeClassName="active" to="/missions">Missions</NavLink>
@@ -48,7 +43,7 @@ function App() {
           </div>
         </nav>
         <Switch>
-          <Route exact path="/rockets">
+          <Route exact path="/">
             <Rockets />
           </Route>
           <Route exact path="/missions">
@@ -56,9 +51,6 @@ function App() {
           </Route>
           <Route exact path="/profile">
             <MyProfile />
-          </Route>
-          <Route exact path="/">
-            <Rockets />
           </Route>
         </Switch>
       </div>

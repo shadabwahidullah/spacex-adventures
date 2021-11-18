@@ -38,7 +38,6 @@ const Rocket = (props) => {
             id={id}
             type="button"
             onClick={() => {
-              console.log('the button was clicked', id, reserved);
               dispatch(cancelReserveRocket(id));
             }}
           >
@@ -50,7 +49,6 @@ const Rocket = (props) => {
             id={id}
             type="button"
             onClick={() => {
-              console.log('the button was clicked', id, reserved);
               dispatch(reserveRocket(id));
             }}
           >

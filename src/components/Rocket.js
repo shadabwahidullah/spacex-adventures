@@ -1,5 +1,7 @@
 import { React } from 'react';
+import { useDispatch } from 'react-redux';
 import Carousel from 'react-bootstrap/Carousel';
+import { reserveRocket } from '../redux/RocketsReducer';
 
 const Rocket = (props) => {
   // From the rockets state slice we only need {id, rocket_name, description, flickr_images}
@@ -11,6 +13,8 @@ const Rocket = (props) => {
     description,
     flickr_images: flickerImages,
   } = rocket;
+
+  const dispatch = useDispatch();
 
   return (
     <div className="row p-3">
@@ -24,7 +28,15 @@ const Rocket = (props) => {
       <div className="col-md-8 ps-3">
         <h2 className="fs-3">{rocketName}</h2>
         <p>{description}</p>
-        <button className="btn btn-primary" id={id} type="button">
+        <button
+          className="btn btn-primary"
+          id={id}
+          type="button"
+          onClick={() => {
+            console.log('the button was clicked', id);
+            dispatch(reserveRocket(id));
+          }}
+        >
           Reserve Rocket
         </button>
       </div>

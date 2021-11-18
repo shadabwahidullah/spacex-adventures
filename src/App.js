@@ -8,13 +8,18 @@ import {
 // Components
 import './App.css';
 import Rockets from './components/Rockets';
-import Missions from './components/Missions';
+import Missions from './components/missions/Missions';
 import logo from './assets/img/logo.png';
 import MyProfile from './components/MyProfile';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/js/src/collapse';
 
 function App() {
+  // if (location.pathname === '/missions') {
+  // // }
+  // className={(isActive) =>
+  //   'nav-link' + (!isActive ? ' ' : 'active')
+  // // }
   return (
     <Router>
       <div className="container">
@@ -51,6 +56,9 @@ function App() {
           </Route>
           <Route exact path="/profile">
             <MyProfile />
+          </Route>
+          <Route exact path="/">
+            <Rockets />
           </Route>
         </Switch>
       </div>

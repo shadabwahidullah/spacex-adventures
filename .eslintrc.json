@@ -19,7 +19,8 @@
     "react/react-in-jsx-scope": "off",
     "import/no-unresolved": "off",
     "react/prop-types": "off",
-    "no-shadow": "off"
+    "no-shadow": "off",
+    "prefer-template": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }

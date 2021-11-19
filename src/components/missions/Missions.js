@@ -19,26 +19,6 @@ const Missions = () => {
     }
   }, []);
 
-  // const [memberValue, setMemberValue] = useState('Not a Member');
-  // const [memberClass, setMemberClass] = useState('not-member');
-  // const [missionValue, setMissionValue] = useState('Join Mission');
-  // const [missionClass, setMissionClass] = useState('join-mission');
-
-  // const handleMission = () => {
-  //   setMemberValue(
-  //     memberValue === 'Not a Member' ? 'Active Member' : 'Not a Member'
-  //   );
-  //   setMemberClass(
-  //     memberClass === 'not-member' ? 'active-member' : 'not-member'
-  //   );
-  //   setMissionValue(
-  //     missionValue === 'Join Mission' ? 'Leave Mission' : 'Join Mission'
-  //   );
-  //   setMissionClass(
-  //     missionClass === 'join-mission' ? 'leave-mission' : 'join-mission'
-  //   );
-  // };
-
   return (
     <section>
       <table className="table table-striped">

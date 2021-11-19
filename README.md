@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Game Portal
 
-## Available Scripts
+> In this project, we will be working with the real live data from the SpaceX API. We are going to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
-In the project directory, you can run:
+![image](https://user-images.githubusercontent.com/51750930/142662068-924a9e2a-f233-46a7-9170-fc8e6839ccf5.png)
 
-### `yarn start`
+## Live Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Check out the [Live Demo]()
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Video Presentation
 
-### `yarn test`
+- Check out the [Presentation Video]()
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Built With
 
-### `yarn build`
+- HTML 
+- CSS
+- BootStrap
+- React
+- Redux
+- Javascript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1 - On Github, on the main page of the Gameportal repository, click the Code button and copy "Clone with HTTPS" by clicking the copy icon.
+In your terminal, enter a git clone and past the link that you copied from the repository, and press the   Enter
+(e.g. git clone https://github.com/shadabwahidullah/Game-protal.git).
 
-### `yarn eject`
+* To get a local copy up and running follow these steps.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2 - open your terminal and clone the project running 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`git clone https://github.com/jonathastavares/JavaScript-Capstone.git`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3 - install or update your npm running
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`npm install` 
 
-## Learn More
+or if you have it installed already 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`npm update`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4 - start your local server and build project using
 
-### Code Splitting
+`npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Testing
 
-### Analyzing the Bundle Size
+We use Jest library to test our code.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You can run those tests locally if you follow the steps above from 1 to 3, and then run:
 
-### Making a Progressive Web App
+`npm test`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Authors
 
-### Advanced Configuration
+👤 **Wahidullah Shadab**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- GitHub: [@githubhandle](https://github.com/shadabwahidullah)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wahidullah-shadab-2712031a3)
 
-### Deployment
+👤 **Zain Sadaqat**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- GitHub: [@githubhandle](https://github.com/zainsadaqat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/zain-sadaqat/)
 
-### `yarn build` fails to minify
+## 🤝 Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- We have used **SpaceX API** to get the information about Rockets and missions. I
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

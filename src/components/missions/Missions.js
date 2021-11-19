@@ -11,7 +11,6 @@ let flag = true;
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionsReducer);
-  console.log('New Missions: ', missions.missions);
 
   useEffect(() => {
     if (flag) {

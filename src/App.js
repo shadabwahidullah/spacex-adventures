@@ -20,7 +20,7 @@ function App() {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <NavLink to="/rockets">
+            <NavLink to="/" exact>
               <img className="logo" src={logo} alt="logo" />
             </NavLink>
             <h1 className="navbar-brand">Space Traveler&apos;s Hub</h1>

@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="rockets-list"
+/>
+`;
+
+exports[`Component tests Missions snapshot test 1`] = `
+<section>
+  <table
+    className="table table-striped"
+  >
+    <thead>
+      <tr>
+        <th
+          scope="col"
+        >
+          Missions
+        </th>
+        <th
+          scope="col"
+        >
+          Description
+        </th>
+        <th
+          scope="col"
+        >
+          Status
+        </th>
+        <th
+          scope="col"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</section>
+`;
+
+exports[`Component tests My profile snapshot test 1`] = `
+<div
+  className="container row"
+>
+  <div
+    className="col-md-6 pt-2"
+  >
+    <h2>
+      My Missions
+    </h2>
+  </div>
+  <div
+    className="col-md-6 pt-2"
+  >
+    <h2>
+      My Rockets
+    </h2>
+  </div>
+</div>
+`;
+
+exports[`Component tests Rockets snapshot test 1`] = `
+<div
+  className="rockets-list"
+/>
+`;
+
+exports[`Component tests Rockets test 1`] = `
+<div
+  className="rockets-list"
+/>
+`;

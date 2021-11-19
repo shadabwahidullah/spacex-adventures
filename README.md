@@ -1,59 +1,71 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Game Portal
 
-> One paragraph statement about the project.
+> In this project, we will be working with the real live data from the SpaceX API. We are going to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
-![screenshot](./app_screenshot.png)
+#### Home/Rockets page
+![image](https://user-images.githubusercontent.com/51750930/142662068-924a9e2a-f233-46a7-9170-fc8e6839ccf5.png)
 
-Additional description about the project and its features.
+#### Missions page
+![image](https://user-images.githubusercontent.com/51750930/142675001-d61d0872-6480-441a-8452-2c9da16ea099.png)
+
+#### My profile page
+![image](https://user-images.githubusercontent.com/51750930/142675144-0faf00ea-f491-4113-8d13-61cc5c7946f3.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
+- HTML 
+- CSS
+- BootStrap
+- React
+- Redux
+- Javascript
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+1 - On Github, on the main page of the Gameportal repository, click the Code button and copy "Clone with HTTPS" by clicking the copy icon.
+In your terminal, enter a git clone and past the link that you copied from the repository, and press the   Enter
+(e.g. git clone https://github.com/zainsadaqat/spacex-adventures.git).
 
+* To get a local copy up and running follow these steps.
 
-To get a local copy up and running follow these simple example steps.
+2 - open your terminal and clone the project running 
 
-### Prerequisites
+`git clone https://github.com/zainsadaqat/spacex-adventures.git`
 
-### Setup
+3 - install or update your npm running
 
-### Install
+`npm install` 
 
-### Usage
+or if you have it installed already 
 
-### Run tests
+`npm update`
 
-### Deployment
+4 - start your local server and build project using
 
+`npm start`
 
+## Testing
+
+We use Jest library to test our code.
+
+You can run those tests locally if you follow the steps above from 1 to 3, and then run:
+
+`npm test`
 
 ## Authors
 
-👤 **Author1**
+👤 **Wahidullah Shadab**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/shadabwahidullah)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/wahidullah-shadab-2712031a3)
 
-👤 **Author2**
+👤 **Zain Sadaqat**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/zainsadaqat)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/zain-sadaqat/)
 
 ## 🤝 Contributing
 
@@ -67,10 +79,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
+- We have used **SpaceX API** to get the information about Rockets and missions. I
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.

@@ -1,35 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../../redux/missions/missions';
 import './Missions.css';
+import {
+  fetchMissions,
+  joinMission,
+  leaveMission,
+} from '../../redux/missions/missions';
 
+let flag = true;
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionsReducer);
 
   useEffect(() => {
-    dispatch(fetchMissions());
+    if (flag) {
+      dispatch(fetchMissions());
+      flag = !flag;
+    }
   }, []);
-
-  const [memberValue, setMemberValue] = useState('Not a Member');
-  const [memberClass, setMemberClass] = useState('not-member');
-  const [missionValue, setMissionValue] = useState('Join Mission');
-  const [missionClass, setMissionClass] = useState('join-mission');
-
-  const handleMission = () => {
-    setMemberValue(
-      memberValue === 'Not a Member' ? 'Active Member' : 'Not a Member',
-    );
-    setMemberClass(
-      memberClass === 'not-member' ? 'active-member' : 'not-member',
-    );
-    setMissionValue(
-      missionValue === 'Join Mission' ? 'Leave Mission' : 'Join Mission',
-    );
-    setMissionClass(
-      missionClass === 'join-mission' ? 'leave-mission' : 'join-mission',
-    );
-  };
 
   return (
     <section>
@@ -43,24 +31,45 @@ const Missions = () => {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission) => (
-            <tr key={mission.mission_id}>
-              <td>{mission.mission_name}</td>
+          {missions.missions.map((mission) => (
+            <tr key={mission.id}>
+              <td>{mission.name}</td>
               <td className="desc">{mission.description}</td>
-              <td>
-                <button type="button" className={`${memberClass}`}>
-                  {memberValue}
-                </button>
-              </td>
-              <td>
-                <button
-                  type="button"
-                  className={`btn ${missionClass}`}
-                  onClick={handleMission}
-                >
-                  {missionValue}
-                </button>
-              </td>
+              {mission.reserved ? (
+                <>
+                  <td>
+                    <button type="button" className="btn btn-success">
+                      Active Member
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      onClick={() => dispatch(leaveMission(mission.id))}
+                    >
+                      Leave Mission
+                    </button>
+                  </td>
+                </>
+              ) : (
+                <>
+                  <td>
+                    <button type="button" className="btn btn-secondary">
+                      Not a Member
+                    </button>
+                  </td>
+                  <td>
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      onClick={() => dispatch(joinMission(mission.id))}
+                    >
+                      Join Mission
+                    </button>
+                  </td>
+                </>
+              )}
             </tr>
           ))}
         </tbody>

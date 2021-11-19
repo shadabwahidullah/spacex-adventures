@@ -5,8 +5,8 @@
 .not-member,
 .active-member {
   font-weight: bold;
-  background-color: rgb(104, 104, 104);
-  color: white;
+  background-color: rgb(104, 104, 104) !important;
+  color: white !important;
   border: none;
   border-radius: 0.5em;
   font-size: 0.75rem;
@@ -16,9 +16,9 @@
 .join-mission,
 .leave-mission {
   font-weight: bold;
-  color: rgb(104, 104, 104);
+  color: rgb(104, 104, 104) !important;
   background-color: transparent;
-  border: 1px solid rgb(104, 104, 104);
+  border: 1px solid rgb(104, 104, 104) !important;
   border-radius: 0.5em;
   font-size: 0.75rem;
   padding: 0.25em 1em;

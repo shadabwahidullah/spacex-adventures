@@ -13,7 +13,7 @@ describe('Testing routes', () => {
       <MemoryRouter initialEntries={['/']}>
         <div>Welcome</div>
       </MemoryRouter>,
-      root
+      root,
     );
 
     // Check correct page content showed up
@@ -29,7 +29,7 @@ describe('Testing routes', () => {
       <MemoryRouter initialEntries={['/missions']}>
         <div>Missions Page</div>
       </MemoryRouter>,
-      root
+      root,
     );
 
     expect(document.body.textContent).toBe('Missions Page');
@@ -44,7 +44,7 @@ describe('Testing routes', () => {
       <MemoryRouter initialEntries={['/profile']}>
         <div>Profile Page</div>
       </MemoryRouter>,
-      root
+      root,
     );
 
     expect(document.body.textContent).toBe('Profile Page');

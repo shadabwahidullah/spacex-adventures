@@ -13,14 +13,6 @@
 #### My profile page
 ![image](https://user-images.githubusercontent.com/51750930/142675144-0faf00ea-f491-4113-8d13-61cc5c7946f3.png)
 
-## Live Demo
-
-- Check out the [Live Demo]()
-
-## Video Presentation
-
-- Check out the [Presentation Video]()
-
 ## Built With
 
 - HTML 

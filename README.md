@@ -27,13 +27,13 @@
 
 1 - On Github, on the main page of the Gameportal repository, click the Code button and copy "Clone with HTTPS" by clicking the copy icon.
 In your terminal, enter a git clone and past the link that you copied from the repository, and press the   Enter
-(e.g. git clone https://github.com/zainsadaqat/spacex-adventures.git).
+(e.g. git clone https://github.com/shadabwahidullah/spacex-adventures.git).
 
 * To get a local copy up and running follow these steps.
 
 2 - open your terminal and clone the project running 
 
-`git clone https://github.com/zainsadaqat/spacex-adventures.git`
+`https://github.com/shadabwahidullah/spacex-adventures.git`
 
 3 - install or update your npm running
 

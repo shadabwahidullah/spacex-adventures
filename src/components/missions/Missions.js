@@ -11,6 +11,7 @@ let flag = true;
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missionsReducer);
+  console.log('New Missions: ', missions.missions);
 
   useEffect(() => {
     if (flag) {
@@ -32,8 +33,8 @@ const Missions = () => {
         </thead>
         <tbody>
           {missions.missions.map((mission) => (
-            <tr key={mission.mission_id}>
-              <td>{mission.mission_name}</td>
+            <tr key={mission.id}>
+              <td>{mission.name}</td>
               <td className="desc">{mission.description}</td>
               {mission.reserved ? (
                 <>
@@ -46,7 +47,7 @@ const Missions = () => {
                     <button
                       type="button"
                       className="btn leave-mission"
-                      onClick={() => dispatch(leaveMission(mission.mission_id))}
+                      onClick={() => dispatch(leaveMission(mission.id))}
                     >
                       Leave Mission
                     </button>
@@ -63,7 +64,7 @@ const Missions = () => {
                     <button
                       type="button"
                       className="btn join-mission"
-                      onClick={() => dispatch(joinMission(mission.mission_id))}
+                      onClick={() => dispatch(joinMission(mission.id))}
                     >
                       Join Mission
                     </button>
